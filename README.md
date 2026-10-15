@@ -2,6 +2,9 @@
 
 面向管理类本科生的轻量课程学习网站。内容包括知识脉络、10章学习笔记、章节练习与测验、4次实验、图表选择演示，以及可下载的原创Notebook和教学模拟数据。
 
+- 课程网站：https://is-huiyuan.github.io/data-visualization-course/
+- 源码仓库：https://github.com/is-huiyuan/data-visualization-course
+
 ## 本地浏览
 
 直接用浏览器打开本目录的 `index.html` 即可，无需安装软件或联网。也可以在本目录启动任意静态文件服务，例如：
@@ -27,7 +30,7 @@ python3 -m http.server 8000
 
 这是一套无需构建步骤的静态网站，兼容GitHub Pages的项目子路径。发布时可将本目录作为新仓库根目录，在仓库 **Settings → Pages** 选择 **Deploy from a branch**，分支 `main`，目录 `/(root)`。
 
-当前版本只在本地准备，尚未创建远程仓库或发布。
+仓库根目录即网站发布目录。更新课程内容后，先运行内容生成和检查，再提交到 `main`；GitHub Pages 将发布该分支中的网站文件。
 
 ## 资源范围
 
