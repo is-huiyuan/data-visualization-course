@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="数据可视化课程学习网站：知识脉络、章节笔记、Python练习、四次实验与交互测验。">
+  <meta name="theme-color" content="#f5f4f1">
+  <title>数据可视化 · 课程学习网站</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="site-layout">
+    <aside class="sidebar" id="sidebar" aria-label="课程导航">
+      <a class="brand" href="#/overview" aria-label="数据可视化课程首页">
+        <span class="brand-icon" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 30 30"><rect x="3" y="16" width="5" height="11" rx="1" fill="#ed7257"/><rect x="12" y="10" width="5" height="17" rx="1" fill="#1a4846"/><rect x="21" y="3" width="5" height="24" rx="1" fill="#5b7c99"/></svg></span>
+        <span><span class="brand-name">数据可视化</span><span class="brand-subtitle">Data Visualization</span></span>
+      </a>
+      <nav id="course-nav" aria-label="学习内容"></nav>
+      <div class="sidebar-footer">
+        <div class="learning-summary"><span>我的学习进度</span><strong id="progress-label">0 / 10</strong></div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+        <p class="muted">进度仅保存在当前浏览器</p>
+        <button class="clear-progress" type="button" id="reset-progress">重置学习进度</button>
+      </div>
+    </aside>
+    <button class="sidebar-overlay" id="sidebar-overlay" aria-label="关闭导航" hidden></button>
+    <div class="main-shell">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="打开课程导航" aria-controls="sidebar" aria-expanded="false" type="button"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <div class="breadcrumbs" id="breadcrumbs">课程首页</div>
+        <div class="topbar-actions"><button class="search-trigger" type="button" id="open-search" aria-label="搜索课程知识点"><svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5"/></svg><span>搜索知识点</span><kbd>/</kbd></button></div>
+      </header>
+      <main class="page" id="main-content" tabindex="-1"><div class="loading">正在整理学习内容…</div></main>
+      <footer class="site-footer"><span>数据可视化 · 课程学习资源</span><a href="#/about">使用说明与资源说明 <span aria-hidden="true">↗</span></a></footer>
+    </div>
+  </div>
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
+    <div class="search-dialog-header"><h2 id="search-title">搜索课程</h2><button class="close-button" id="close-search" type="button" aria-label="关闭搜索">×</button></div>
+    <label class="sr-only" for="course-search">输入章节、图表名称或知识点</label>
+    <input class="search-input" id="course-search" placeholder="试试：箱线图、缺失值、仪表盘…" autocomplete="off" type="search">
+    <div class="search-results" id="search-results"></div>
+    <p class="hint">按 Esc 关闭。搜索范围：章节、知识点与练习。</p>
+  </dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <noscript><p>此网站需要启用 JavaScript 才能显示章节与练习。所有资源都在本站内，不需要注册账号。</p></noscript>
+  <script defer src="data/course-data.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>

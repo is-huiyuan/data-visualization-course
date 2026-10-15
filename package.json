@@ -1,0 +1,11 @@
+{
+  "name": "data-visualization-course",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "数据可视化课程静态学习网站",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

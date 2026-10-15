@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+.idea/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+playwright-report/
+test-results/
+*.log
+screenshots/
+.env
+.env.*

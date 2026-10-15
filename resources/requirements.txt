@@ -1,0 +1,12 @@
+# 基础数据分析与绘图（本资源不会自动安装任何依赖）
+pandas
+matplotlib
+
+# 可选：collection的BeautifulSoup练习；未安装时有标准库预览示例
+# beautifulsoup4
+
+# 可选：交互图表及离线HTML；基础任务不依赖它们
+# plotly
+
+# 可选：本地Notebook编辑器，已有Jupyter/VS Code可不另装
+# jupyterlab
